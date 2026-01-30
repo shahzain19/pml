@@ -1,5 +1,5 @@
 {
-  "name": "pml",
+  "name": "pml-cli",
   "version": "0.1.0",
   "description": "Project Memory Layer",
   "type": "module",
