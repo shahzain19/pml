@@ -14,7 +14,8 @@
     "/src/commands": "auto-detected",
     "/src/core": "auto-detected",
     "/src/core/generators": "auto-detected",
-    "/src/utils": "auto-detected"
+    "/src/utils": "auto-detected",
+    "/website": "auto-detected"
   },
   "decisions": []
 }

@@ -1,10 +1,7 @@
-import fs from "fs";
-import path from "path";
+import { loadMemory } from "./config.js";
 
 export function buildContext(topic: string) {
-  const memory = JSON.parse(
-    fs.readFileSync(path.join(process.cwd(), "pml.json"), "utf-8")
-  );
+  const { memory } = loadMemory();
 
   return `
 PROJECT

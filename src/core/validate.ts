@@ -1,10 +1,7 @@
-import fs from "fs";
-import path from "path";
+import { loadMemory } from "./config.js";
 
 export function validateSuggestion(text: string) {
-  const memory = JSON.parse(
-    fs.readFileSync(path.join(process.cwd(), "pml.json"), "utf-8")
-  );
+  const { memory } = loadMemory();
 
   const warnings: string[] = [];
 
@@ -26,9 +23,7 @@ export function validateSuggestion(text: string) {
   return warnings;
 }
 export function validateDiff(diff: string) {
-  const memory = JSON.parse(
-    fs.readFileSync(path.join(process.cwd(), "pml.json"), "utf-8")
-  );
+  const { memory } = loadMemory();
 
   const warnings: string[] = [];
 

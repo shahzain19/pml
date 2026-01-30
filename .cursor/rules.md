@@ -13,3 +13,4 @@ Folders:
 - /src/core
 - /src/core/generators
 - /src/utils
+- /website
