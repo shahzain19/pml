@@ -1,0 +1,20 @@
+{
+  "project": {
+    "name": "pml",
+    "language": "TypeScript"
+  },
+  "stack": {},
+  "rules": [
+    "Never use shadcn in this project"
+  ],
+  "folders": {
+    "/.cursor": "auto-detected",
+    "/.github": "auto-detected",
+    "/src": "auto-detected",
+    "/src/commands": "auto-detected",
+    "/src/core": "auto-detected",
+    "/src/core/generators": "auto-detected",
+    "/src/utils": "auto-detected"
+  },
+  "decisions": []
+}
