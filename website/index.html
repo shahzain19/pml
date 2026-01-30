@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PML — Project Memory Layer</title>
+    <meta name="description" content="Continuous project authority for humans and AI.">
+</head>
+
+<body
+    class="bg-pml-bg text-pml-text font-sans antialiased overflow-x-hidden relative selection:bg-pml-accent/20 selection:text-pml-accent">
+
+    <!-- Background Noise Overlay -->
+    <div class="noise-bg mix-blend-overlay"></div>
+
+    <!-- Dynamic Living Background -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div
+            class="absolute top-[-20%] left-[20%] w-[60vw] h-[60vw] bg-pml-accent/5 rounded-full blur-[150px] animate-pulse-slow">
+        </div>
+        <div
+            class="absolute bottom-[-20%] right-[10%] w-[50vw] h-[50vw] bg-pml-cyan/5 rounded-full blur-[150px] animate-pulse-slow delay-2000">
+        </div>
+    </div>
+
+    <!-- COOL NAVBAR -->
+    <nav
+        class="fixed top-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-1 p-1.5 rounded-full bg-pml-panel/60 backdrop-blur-xl border border-white/10 shadow-2xl animate-fade-in-up">
+        <a href="/"
+            class="px-5 py-2 text-sm text-white font-medium bg-white/10 rounded-full shadow-[0_0_10px_rgba(255,255,255,0.1)] transition-all">Home</a>
+        <a href="/docs.html" class="px-5 py-2 text-sm text-pml-muted hover:text-white transition-colors relative group">
+            Docs
+            <span
+                class="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-pml-accent group-hover:w-1/2 transition-all duration-300"></span>
+        </a>
+        <a href="/changelog.html"
+            class="px-5 py-2 text-sm text-pml-muted hover:text-white transition-colors relative group">
+            Changelog
+            <span
+                class="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-pml-accent group-hover:w-1/2 transition-all duration-300"></span>
+        </a>
+        <div class="w-px h-4 bg-white/10 mx-1"></div>
+        <a href="https://github.com/shahzain19/pml" target="_blank"
+            class="px-3 py-2 text-pml-muted hover:text-white transition-colors">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0 3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                </path>
+                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+            </svg>
+        </a>
+    </nav>
+
+    <!-- 1. HERO -->
+    <section
+        class="min-h-screen w-full flex flex-col justify-center px-6 md:px-24 max-w-7xl mx-auto relative z-10 pt-40"
+        id="hero">
+        <div class="space-y-10 max-w-5xl relative">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-pml-accent/20 bg-pml-accent/5 text-pml-accent text-xs font-mono uppercase tracking-widest animate-fade-in-up">
+                <span class="w-1.5 h-1.5 rounded-full bg-pml-accent animate-pulse"></span>
+                System Online
+            </div>
+
+            <h1 class="text-5xl md:text-8xl font-medium tracking-tighter leading-[1.05] animate-fade-in-up delay-100">
+                Your project <br>has memory.<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-br from-white via-white to-white/20">AI
+                    doesn’t.</span>
+            </h1>
+
+            <p
+                class="text-pml-muted text-xl md:text-2xl font-light max-w-2xl leading-relaxed animate-fade-in-up delay-200">
+                PML is the missing layer of authority. <br>
+                It forces context, rules, and structure to persist.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-6 pt-6 animate-fade-in-up delay-300">
+                <div
+                    class="p-[1px] rounded-full bg-gradient-to-r from-pml-accent via-pml-cyan to-pml-accent animate-aurora-move bg-[length:200%_100%] group">
+                    <button
+                        onclick="navigator.clipboard.writeText('npm i -g pml-cli'); const t = this.querySelector('.cmd-text'); const original = t.innerText; t.innerText = 'Copied!'; setTimeout(() => t.innerText = original, 2000);"
+                        class="relative bg-pml-bg hover:bg-pml-panel text-white px-8 py-4 rounded-full font-mono text-sm font-bold tracking-wider overflow-hidden transition-all duration-300 flex items-center gap-3">
+                        <span class="text-pml-accent">></span>
+                        <span class="cmd-text">npm i -g pml-cli</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. PROBLEM statement -->
+    <section class="py-32 px-6 relative z-10 border-y border-white/5 bg-black/20 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1 relative">
+                <!-- Chaotic text visual -->
+                <div
+                    class="font-mono text-xs md:text-sm text-pml-muted/30 space-y-1 select-none pointer-events-none blur-[1px]">
+                    <p>import { session } from '../../deprecated/auth'; // TODO: fix this</p>
+                    <p>const User = any; // I don't know the type</p>
+                    <p>mkdir src/temp_v2_final</p>
+                    <p class="text-pml-error/40 line-through">rm -rf src/core</p>
+                    <p>console.log("why is this null???")</p>
+                    <p>// AI: I think this is how we did it last time...</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div
+                        class="bg-pml-error/10 border border-pml-error/30 text-pml-error px-4 py-2 rounded font-mono text-sm tracking-widest uppercase animate-pulse">
+                        Entropy Critical
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-1 md:order-2 space-y-8">
+                <h2 class="text-3xl md:text-5xl font-medium leading-tight">
+                    Entropy is the default.
+                </h2>
+                <div class="space-y-4 text-pml-muted text-lg">
+                    <p>Without authority, AI guesses. It hallucinates patterns that don't exist and ignores the ones
+                        that do.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SOLUTION GRID (Bento) -->
+    <section class="py-40 px-6 md:px-12 max-w-[1400px] mx-auto relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+            <span class="text-pml-accent font-mono text-xs tracking-[0.2em] uppercase">Architecture</span>
+            <h2 class="text-4xl md:text-5xl font-medium tracking-tight">The Intelligence Layer</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[360px]">
+            <!-- Terminal Card (Large) -->
+            <div class="md:col-span-2 row-span-1 spotlight-card rounded-[2rem] border border-white/5 overflow-hidden flex flex-col group"
+                id="terminal-card">
+                <div class="relative z-10 h-full p-8 md:p-12 flex flex-col">
+                    <div class="flex items-center gap-2 mb-6 opacity-40 group-hover:opacity-100 transition-opacity">
+                        <div class="w-3 h-3 rounded-full bg-[#FF5F56]"></div>
+                        <div class="w-3 h-3 rounded-full bg-[#FFBD2E]"></div>
+                        <div class="w-3 h-3 rounded-full bg-[#27C93F]"></div>
+                        <div class="ml-4 font-mono text-xs text-white/40">~ pml watch</div>
+                    </div>
+                    <div
+                        class="font-mono text-sm md:text-base text-pml-text/90 space-y-3 grow flex flex-col justify-end">
+                        <div class="text-pml-muted/50 border-b border-white/5 pb-2 mb-2"># Live Project Monitor</div>
+                        <div id="terminal-content" class="space-y-1"></div>
+                        <div class="flex items-center text-pml-accent mt-2 terminal-cursor hidden">
+                            <span>➜</span>
+                            <span class="ml-2">_</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Features -->
+            <div class="spotlight-card rounded-[2rem] border border-white/5 p-8 md:p-10 flex flex-col justify-between">
+                <div
+                    class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-2xl mb-4 text-pml-accent">
+                    🧠</div>
+                <div class="relative z-10">
+                    <h3 class="text-xl font-medium text-white mb-3">Persistent Memory</h3>
+                    <p class="text-pml-muted text-sm leading-relaxed">The "Why" is stored alongside the "What".</p>
+                </div>
+            </div>
+            <div class="spotlight-card rounded-[2rem] border border-white/5 p-8 md:p-10 flex flex-col justify-between">
+                <div
+                    class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-2xl mb-4 text-pml-cyan">
+                    👁️</div>
+                <div class="relative z-10">
+                    <h3 class="text-xl font-medium text-white mb-3">Active Surveillance</h3>
+                    <p class="text-pml-muted text-sm leading-relaxed">It watches file system events. Drift is caught
+                        instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: COMPARISON -->
+    <section class="py-32 px-6 max-w-5xl mx-auto relative z-10">
+        <h2 class="text-3xl font-medium text-center mb-16">The Difference</h2>
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 rounded-[2.5rem] overflow-hidden border border-white/10">
+            <!-- Left: Typical -->
+            <div class="bg-black/80 p-12 backdrop-blur-md">
+                <h3 class="text-pml-muted font-mono text-sm uppercase tracking-wider mb-8">Standard Workflow</h3>
+                <ul class="space-y-6">
+                    <li class="flex items-start gap-4 opacity-50">
+                        <span class="text-red-500">✕</span>
+                        <span>Context resets every chat session</span>
+                    </li>
+                    <li class="flex items-start gap-4 opacity-50">
+                        <span class="text-red-500">✕</span>
+                        <span>New devs scrape docs to understand</span>
+                    </li>
+                    <li class="flex items-start gap-4 opacity-50">
+                        <span class="text-red-500">✕</span>
+                        <span>AI creates duplicate utility functions</span>
+                    </li>
+                    <li class="flex items-start gap-4 opacity-50">
+                        <span class="text-red-500">✕</span>
+                        <span>Architecture exists only in your head</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- Right: PML -->
+            <div class="bg-pml-panel/20 p-12 backdrop-blur-md relative overflow-hidden">
+                <div class="absolute inset-0 bg-pml-accent/5 pointer-events-none"></div>
+                <h3 class="text-pml-accent font-mono text-sm uppercase tracking-wider mb-8">PML Workflow</h3>
+                <ul class="space-y-6">
+                    <li class="flex items-start gap-4">
+                        <span class="text-pml-accent">✓</span>
+                        <span class="text-white">Context persists forever in .pml</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-pml-accent">✓</span>
+                        <span class="text-white">Run `pml query` to ask the project</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-pml-accent">✓</span>
+                        <span class="text-white">AI forbidden from duplicating</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-pml-accent">✓</span>
+                        <span class="text-white">Architecture enforced by schema</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: FAQ -->
+    <section class="py-32 px-6 max-w-3xl mx-auto relative z-10">
+        <h2 class="text-3xl font-medium text-center mb-16">Questions</h2>
+        <div class="space-y-4">
+            <details class="group bg-white/5 rounded-2xl border border-white/5 open:bg-white/10 transition-colors">
+                <summary
+                    class="flex items-center justify-between p-6 cursor-pointer font-medium text-lg list-none text-white/80 group-hover:text-white">
+                    Does this work with Cursor?
+                    <span class="transition group-open:rotate-180">↓</span>
+                </summary>
+                <div class="px-6 pb-6 text-pml-muted leading-relaxed">
+                    Yes. PML automatically generates and updates `.cursor/rules.md` based on your project's current
+                    state and memory graph, ensuring Cursor always has the latest context.
+                </div>
+            </details>
+            <details class="group bg-white/5 rounded-2xl border border-white/5 open:bg-white/10 transition-colors">
+                <summary
+                    class="flex items-center justify-between p-6 cursor-pointer font-medium text-lg list-none text-white/80 group-hover:text-white">
+                    Is my data sent to the cloud?
+                    <span class="transition group-open:rotate-180">↓</span>
+                </summary>
+                <div class="px-6 pb-6 text-pml-muted leading-relaxed">
+                    No. PML is local-first. The memory graph is stored in your project's `.pml` directory. You own your
+                    data.
+                </div>
+            </details>
+            <details class="group bg-white/5 rounded-2xl border border-white/5 open:bg-white/10 transition-colors">
+                <summary
+                    class="flex items-center justify-between p-6 cursor-pointer font-medium text-lg list-none text-white/80 group-hover:text-white">
+                    Does it work with existing projects?
+                    <span class="transition group-open:rotate-180">↓</span>
+                </summary>
+                <div class="px-6 pb-6 text-pml-muted leading-relaxed">
+                    Yes. Run `pml init` in any existing repository. It will scan your file structure and attempt to
+                    build an initial memory graph.
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- 4. FINAL CTA -->
+    <section class="py-40 text-center relative z-10">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-5xl md:text-7xl font-medium tracking-tighter mb-12 text-white">Stop the drift.</h2>
+            <div class="flex flex-col items-center gap-6">
+                <a href="https://github.com/shahzain19/pml"
+                    class="bg-white text-black px-12 py-5 rounded-full font-bold text-lg hover:scale-105 hover:shadow-[0_0_60px_-15px_rgba(255,255,255,0.5)] transition-all duration-500">
+                    Get Started with PML
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center relative z-10 bg-black/80 backdrop-blur-xl">
+        <div
+            class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-mono text-pml-muted/50">
+            <div>&copy; 2026 Project Memory Layer</div>
+            <div class="flex gap-6">
+                <a href="/docs.html" class="hover:text-white transition-colors">DOCS</a>
+                <a href="/changelog.html" class="hover:text-white transition-colors">CHANGELOG</a>
+                <a href="https://github.com/shahzain19/pml" class="hover:text-white transition-colors">GITHUB</a>
+                <a href="https://www.npmjs.com/package/pml-cli" class="hover:text-white transition-colors">NPM</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>

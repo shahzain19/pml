@@ -1,0 +1,13 @@
+{
+  "project": {
+    "name": "website",
+    "language": "TypeScript"
+  },
+  "stack": {},
+  "rules": [
+    "never light",
+    "test rule"
+  ],
+  "folders": {},
+  "decisions": []
+}

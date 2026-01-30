@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation — PML</title>
+    <meta name="description" content="PML Documentation">
+</head>
+
+<body
+    class="bg-pml-bg text-pml-text font-sans antialiased overflow-x-hidden relative selection:bg-pml-accent/20 selection:text-pml-accent">
+    <!-- Navbar -->
+    <nav
+        class="fixed top-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-1 p-1.5 rounded-full bg-pml-panel/60 backdrop-blur-xl border border-white/10 shadow-2xl transition-all duration-300">
+        <a href="/" class="px-5 py-2 text-sm text-pml-muted hover:text-white transition-colors">Home</a>
+        <a href="/docs.html"
+            class="px-5 py-2 text-sm text-white font-medium bg-white/10 rounded-full shadow-[0_0_10px_rgba(255,255,255,0.1)] transition-all">Docs</a>
+        <a href="/changelog.html"
+            class="px-5 py-2 text-sm text-pml-muted hover:text-white transition-colors">Changelog</a>
+    </nav>
+
+    <div class="noise-bg mix-blend-overlay"></div>
+
+    <!-- Background Gradient -->
+    <div
+        class="fixed top-0 left-0 w-full h-[50vh] bg-gradient-to-b from-pml-panel/30 to-transparent pointer-events-none z-0">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 pt-40 pb-20 flex flex-col md:flex-row gap-16 relative z-10 min-h-screen">
+
+        <!-- Sidebar -->
+        <aside class="w-full md:w-64 shrink-0 hidden md:block">
+            <div class="sticky top-32 space-y-10">
+                <div>
+                    <h3 class="font-mono text-xs text-pml-accent uppercase tracking-widest mb-6 px-2">Getting Started
+                    </h3>
+                    <div class="flex flex-col gap-1 text-sm text-pml-muted">
+                        <a href="#"
+                            class="hover:text-white hover:bg-white/5 transition-all text-white font-medium px-4 py-2 rounded-lg bg-white/5">Introduction</a>
+                        <a href="#"
+                            class="hover:text-white hover:bg-white/5 transition-all px-4 py-2 rounded-lg">Installation</a>
+                        <a href="#" class="hover:text-white hover:bg-white/5 transition-all px-4 py-2 rounded-lg">Core
+                            Concepts</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-mono text-xs text-white/40 uppercase tracking-widest mb-6 px-2">Reference</h3>
+                    <div class="flex flex-col gap-1 text-sm text-pml-muted">
+                        <a href="#" class="hover:text-white hover:bg-white/5 transition-all px-4 py-2 rounded-lg">CLI
+                            Commands</a>
+                        <a href="#"
+                            class="hover:text-white hover:bg-white/5 transition-all px-4 py-2 rounded-lg">Configuration</a>
+                        <a href="#" class="hover:text-white hover:bg-white/5 transition-all px-4 py-2 rounded-lg">Memory
+                            Graph</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="w-full max-w-3xl">
+            <h1 class="text-4xl md:text-6xl font-medium mb-8 tracking-tight">Introduction</h1>
+            <p
+                class="text-xl md:text-2xl text-pml-muted font-light leading-relaxed mb-16 border-b border-white/5 pb-16">
+                PML (Project Memory Layer) is a local-first authority system for AI-assisted development. It prevents
+                context drift by maintaining a persistent graph of project rules, decisions, and structure.
+            </p>
+
+            <div class="space-y-12">
+                <section>
+                    <h2 class="text-3xl font-medium text-white mb-6">Why PML?</h2>
+                    <p class="text-lg text-pml-muted leading-relaxed mb-8">
+                        LLMs context windows are ephemeral. Even with large windows, they forget the *reasoning* behind
+                        decisions made 2 weeks ago. PML creates a permanent record that AI tools must consult before
+                        suggesting changes.
+                    </p>
+
+                    <!-- Code block -->
+                    <div
+                        class="bg-black border border-white/10 rounded-2xl p-8 font-mono text-sm overflow-x-auto shadow-2xl relative group">
+                        <div class="absolute top-4 right-4 flex gap-2">
+                            <div class="w-3 h-3 rounded-full bg-white/10"></div>
+                            <div class="w-3 h-3 rounded-full bg-white/10"></div>
+                        </div>
+                        <div class="space-y-3">
+                            <p class="text-pml-muted select-none">$ npm install -g pml-cli</p>
+                            <p class="text-pml-muted select-none">$ pml init</p>
+                            <div class="pt-2">
+                                <p class="text-green-400">✓ Memory graph initialized at .pml/</p>
+                                <p class="text-green-400">✓ Scanned 45 files</p>
+                                <p class="text-green-400">✓ Generated .cursor/rules.md</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-3xl font-medium text-white mb-6">Core Philosophy</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white/5 border border-white/5 p-6 rounded-2xl">
+                            <h3 class="text-white font-medium mb-2">Local First</h3>
+                            <p class="text-pml-muted text-sm">Data never leaves your machine. Your graph is your own.
+                            </p>
+                        </div>
+                        <div class="bg-white/5 border border-white/5 p-6 rounded-2xl">
+                            <h3 class="text-white font-medium mb-2">Deny by Default</h3>
+                            <p class="text-pml-muted text-sm">Structural changes must be explicitly approved.</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/5 p-6 rounded-2xl">
+                            <h3 class="text-white font-medium mb-2">Tool Agnostic</h3>
+                            <p class="text-pml-muted text-sm">Maintains authoritative files for Cursor, Copilot, and
+                                others.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Bottom Nav -->
+            <div class="flex justify-between mt-24 pt-12 border-t border-white/5">
+                <div></div>
+                <a href="#" class="group text-right">
+                    <div class="text-xs font-mono text-pml-muted mb-1">NEXT</div>
+                    <div class="text-xl font-medium text-white group-hover:text-pml-accent transition-colors">
+                        Installation →</div>
+                </a>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 text-center relative z-10 bg-black/80 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center text-xs font-mono text-pml-muted/50">
+            <div>PROJECT MEMORY LAYER</div>
+            <div>DOCS v1.0.0</div>
+        </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>
